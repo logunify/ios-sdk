@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogUnify'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'LogUnify is a library makes logging events from your app to your data warehouse easy'
 
 # This description is used to generate tags and improve search results.
@@ -47,4 +47,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'SQLite.swift', '~> 0.14.1'
   s.dependency 'SwiftProtobuf', '~> 1.0'
+  s.dependency 'ReachabilitySwift', '~> 5.0.0'
 end

@@ -23,8 +23,7 @@ expect(ocean.isClean).toEventually(beTruthy())
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Some Background: Expressing Outcomes Using Assertions in XCTest](#some-background-expressing-outcomes-using-assertions-in-xctest)
 - [Nimble: Expectations Using `expect(...).to`](#nimble-expectations-using-expectto)
@@ -123,10 +122,10 @@ expect(seagull.squawk).to(equal(@"Squee!"));
 ```
 
 > The `expect` function autocompletes to include `file:` and `line:`,
-> but these parameters are optional. Use the default values to have
-> Xcode highlight the correct line when an expectation is not met.
+  but these parameters are optional. Use the default values to have
+  Xcode highlight the correct line when an expectation is not met.
 
-To perform the opposite expectation--to assert something is _not_
+To perform the opposite expectation--to assert something is *not*
 equal--use `toNot` or `notTo`:
 
 ```swift
@@ -162,7 +161,7 @@ expect(1 + 1).to(equal(3), description: "Make sure libKindergartenMath is loaded
 // expected to equal <3>, got <2>
 ```
 
-Or the \*WithDescription version in Objective-C:
+Or the *WithDescription version in Objective-C:
 
 ```objc
 // Objective-C
@@ -189,8 +188,8 @@ expect(1 + 1).to(equal("Squee!"))
 ```
 
 > Nimble uses generics--only available in Swift--to ensure
-> type correctness. That means type checking is
-> not available when using Nimble in Objective-C. :sob:
+  type correctness. That means type checking is
+  not available when using Nimble in Objective-C. :sob:
 
 ## Operator Overloads
 
@@ -208,7 +207,7 @@ expect(10) > 2
 ```
 
 > Operator overloads are only available in Swift, so you won't be able
-> to use this syntax in Objective-C. :broken_heart:
+  to use this syntax in Objective-C. :broken_heart:
 
 ## Lazily Computed Values
 
@@ -291,8 +290,8 @@ expect(1 as CInt).to(equal(1))
 ```
 
 > In Objective-C, Nimble only supports Objective-C objects. To
-> make expectations on primitive C values, wrap then in an object
-> literal:
+  make expectations on primitive C values, wrap then in an object
+  literal:
 
 ```objc
 expect(@(1 + 1)).to(equal(@2));
@@ -312,6 +311,7 @@ DispatchQueue.main.async {
 expect(ocean).toEventually(contain("dolphins", "whales"))
 ```
 
+
 ```objc
 // Objective-C
 
@@ -324,7 +324,7 @@ expect(ocean).toEventually(contain(@"dolphins", @"whales"));
 
 Note: toEventually triggers its polls on the main thread. Blocking the main
 thread will cause Nimble to stop the run loop. This can cause test pollution
-for whatever incomplete code that was running on the main thread. Blocking the
+for whatever incomplete code that was running on the main thread.  Blocking the
 main thread can be caused by blocking IO, calls to sleep(), deadlocks, and
 synchronous IPC.
 
@@ -477,9 +477,9 @@ to keep in mind when using Nimble in Objective-C:
 
 The following types are currently converted to an `NSObject` type:
 
-- **C Numeric types** are converted to `NSNumber *`
-- `NSRange` is converted to `NSValue *`
-- `char *` is converted to `NSString *`
+ - **C Numeric types** are converted to `NSNumber *`
+ - `NSRange` is converted to `NSValue *`
+ - `char *` is converted to `NSString *`
 
 For the following matchers:
 
@@ -513,9 +513,9 @@ NMB_expect(^{ return seagull.squawk; }, __FILE__, __LINE__).to(NMB_equal(@"Squee
 ```
 
 > Disabling the shorthand is useful if you're testing functions with
-> names that conflict with Nimble functions, such as `expect` or
-> `equal`. If that's not the case, there's no point in disabling the
-> shorthand.
+  names that conflict with Nimble functions, such as `expect` or
+  `equal`. If that's not the case, there's no point in disabling the
+  shorthand.
 
 # Built-in Matcher Functions
 
@@ -625,14 +625,15 @@ expect(actual) !== expected
 ```
 
 It is important to remember that `beIdenticalTo` only makes sense when comparing
-types with reference semantics, which have a notion of identity. In Swift,
-that means types that are defined as a `class`.
+types with reference semantics, which have a notion of identity. In Swift, 
+that means types that are defined as a `class`. 
 
 This matcher will not work when comparing types with value semantics such as
 those defined as a `struct` or `enum`. If you need to compare two value types,
 consider what it means for instances of your type to be identical. This may mean
-comparing individual properties or, if it makes sense to do so, conforming your type
+comparing individual properties or, if it makes sense to do so, conforming your type 
 to `Equatable` and using Nimble's equivalence matchers instead.
+
 
 ```objc
 // Objective-C
@@ -672,7 +673,7 @@ expect(actual).to(beGreaterThanOrEqualTo(expected));
 ```
 
 > Values given to the comparison matchers above must implement
-> `Comparable`.
+  `Comparable`.
 
 Because of how computers represent floating point numbers, assertions
 that two floating point numbers be equal will sometimes fail. To express
@@ -714,7 +715,6 @@ expect(actual) ≈ expected
 expect(actual) ≈ (expected, delta)
 
 ```
-
 (Type <kbd>option</kbd>+<kbd>x</kbd> to get `≈` on a U.S. keyboard)
 
 The former version uses the default delta of 0.0001. Here is yet another way to do this:
@@ -726,7 +726,6 @@ expect(actual) ≈ expected ± delta
 expect(actual) == expected ± delta
 
 ```
-
 (Type <kbd>option</kbd>+<kbd>shift</kbd>+<kbd>=</kbd> to get `±` on a U.S. keyboard)
 
 If you are comparing arrays of floating point numbers, you'll find the following useful:
@@ -764,7 +763,7 @@ expect(instance).to(beAKindOf(aClass));
 ```
 
 > Instances must be Objective-C objects: subclasses of `NSObject`,
-> or Swift objects bridged to Objective-C with the `@objc` prefix.
+  or Swift objects bridged to Objective-C with the `@objc` prefix.
 
 For example, to assert that `dolphin` is a kind of `Mammal`:
 
@@ -781,7 +780,7 @@ expect(dolphin).to(beAKindOf([Mammal class]));
 ```
 
 > `beAnInstanceOf` uses the `-[NSObject isMemberOfClass:]` method to
-> test membership. `beAKindOf` uses `-[NSObject isKindOfClass:]`.
+  test membership. `beAKindOf` uses `-[NSObject isKindOfClass:]`.
 
 ## Truthiness
 
@@ -828,7 +827,7 @@ If you're using Swift, you can use the `throwAssertion` matcher to check if an a
 ```swift
 // Swift
 
-// Passes if 'somethingThatThrows()' throws an assertion,
+// Passes if 'somethingThatThrows()' throws an assertion, 
 // such as by calling 'fatalError()' or if a precondition fails:
 expect { try somethingThatThrows() }.to(throwAssertion())
 expect { () -> Void in fatalError() }.to(throwAssertion())
@@ -852,8 +851,8 @@ expect(reachedPoint2) == false
 
 Notes:
 
-- This feature is only available in Swift.
-- The tvOS simulator is supported, but using a different mechanism, requiring you to turn off the `Debug executable` scheme setting for your tvOS scheme's Test configuration.
+* This feature is only available in Swift.
+* The tvOS simulator is supported, but using a different mechanism, requiring you to turn off the `Debug executable` scheme setting for your tvOS scheme's Test configuration.
 
 ## Swift Error Handling
 
@@ -945,7 +944,7 @@ expect(actual).to(raiseException().satisfyingBlock(^(NSException *exception) {
 }));
 ```
 
-Note: Swift currently doesn't have exceptions (see [#220](https://github.com/Quick/Nimble/issues/220#issuecomment-172667064)).
+Note: Swift currently doesn't have exceptions (see [#220](https://github.com/Quick/Nimble/issues/220#issuecomment-172667064)). 
 Only Objective-C code can raise exceptions that Nimble will catch.
 
 ## Collection Membership
@@ -971,8 +970,8 @@ expect(actual).to(beEmpty());
 ```
 
 > In Swift `contain` takes any number of arguments. The expectation
-> passes if all of them are members of the collection. In Objective-C,
-> `contain` only takes one argument [for now](https://github.com/Quick/Nimble/issues/27).
+  passes if all of them are members of the collection. In Objective-C,
+  `contain` only takes one argument [for now](https://github.com/Quick/Nimble/issues/27).
 
 For example, to assert that a list of sea creature names contains
 "dolphin" and "starfish":
@@ -991,7 +990,7 @@ expect(@[@"whale", @"dolphin", @"starfish"]).to(contain(@"starfish"));
 ```
 
 > `contain` and `beEmpty` expect collections to be instances of
-> `NSArray`, `NSSet`, or a Swift collection composed of `Equatable` elements.
+  `NSArray`, `NSSet`, or a Swift collection composed of `Equatable` elements.
 
 To test whether a set of elements is present at the beginning or end of
 an ordered collection, use `beginWith` and `endWith`:
@@ -1017,11 +1016,11 @@ expect(actual).to(endWith(expected));
 ```
 
 > `beginWith` and `endWith` expect collections to be instances of
-> `NSArray`, or ordered Swift collections composed of `Equatable`
-> elements.
+  `NSArray`, or ordered Swift collections composed of `Equatable`
+  elements.
 
-Like `contain`, in Objective-C `beginWith` and `endWith` only support
-a single argument [for now](https://github.com/Quick/Nimble/issues/27).
+  Like `contain`, in Objective-C `beginWith` and `endWith` only support
+  a single argument [for now](https://github.com/Quick/Nimble/issues/27).
 
 For code that returns collections of complex objects without a strict
 ordering, there is the `containElementSatisfying` matcher:
@@ -1035,7 +1034,7 @@ struct Turtle {
 
 let turtles: [Turtle] = functionThatReturnsSomeTurtlesInAnyOrder()
 
-// This set of matchers passes regardless of whether the array is
+// This set of matchers passes regardless of whether the array is 
 // [{color: "blue"}, {color: "green"}] or [{color: "green"}, {color: "blue"}]:
 
 expect(turtles).to(containElementSatisfying({ turtle in
@@ -1056,12 +1055,12 @@ expect(turtles).to(containElementSatisfying({ turtle in
 @property (nonatomic, readonly, nonnull) NSString *color;
 @end
 
-@implementation Turtle
+@implementation Turtle 
 @end
 
 NSArray<Turtle *> * __nonnull turtles = functionThatReturnsSomeTurtlesInAnyOrder();
 
-// This set of matchers passes regardless of whether the array is
+// This set of matchers passes regardless of whether the array is 
 // [{color: "blue"}, {color: "green"}] or [{color: "green"}, {color: "blue"}]:
 
 expect(turtles).to(containElementSatisfying(^BOOL(id __nonnull object) {
@@ -1185,10 +1184,10 @@ For example, instances of `Array`, `Dictionary`, or `Set`.
 
 For Objective-C, the actual value must be one of the following classes, or their subclasses:
 
-- `NSArray`,
-- `NSDictionary`,
-- `NSSet`, or
-- `NSHashTable`.
+ - `NSArray`,
+ - `NSDictionary`,
+ - `NSSet`, or
+ - `NSHashTable`.
 
 ## Notifications
 
@@ -1210,8 +1209,8 @@ expect {
 }.to(postNotifications(equal([testNotification]), from: notificationCenter))
 
 // Passes if the closure in expect { ... } posts a notification with the provided names to a given
-// notification center. Make sure to use this when running tests on Catalina,
-// using DistributedNotificationCenter as there is currently no way
+// notification center. Make sure to use this when running tests on Catalina, 
+// using DistributedNotificationCenter as there is currently no way 
 // of observing notifications without providing specific names.
 let distributedNotificationCenter = DistributedNotificationCenter()
 expect {
@@ -1227,10 +1226,10 @@ expect {
 
 ```swift
 // Swift
-let aResult: Result<String, Error> = .success("Hooray")
+let aResult: Result<String, Error> = .success("Hooray") 
 
 // passes if result is .success
-expect(aResult).to(beSuccess())
+expect(aResult).to(beSuccess()) 
 
 // passes if result value is .success and validates Success value
 expect(aResult).to(beSuccess { value in
@@ -1241,15 +1240,15 @@ expect(aResult).to(beSuccess { value in
 enum AnError: Error {
     case somethingHappened
 }
-let otherResult: Result<String, AnError> = .failure(.somethingHappened)
+let otherResult: Result<String, AnError> = .failure(.somethingHappened) 
 
 // passes if result is .failure
-expect(otherResult).to(beFailure())
+expect(otherResult).to(beFailure()) 
 
 // passes if result value is .failure and validates error
 expect(otherResult).to(beFailure { error in
     expect(error).to(matchError(AnError.somethingHappened))
-})
+}) 
 ```
 
 > This matcher is only available in Swift.
@@ -1282,9 +1281,9 @@ expect(@6).to(satisfyAnyOf(equal(@2), equal(@3), equal(@4), equal(@5), equal(@6)
 ```
 
 Note: This matcher allows you to chain any number of matchers together. This provides flexibility,
-but if you find yourself chaining many matchers together in one test, consider whether you
-could instead refactor that single test into multiple, more precisely focused tests for
-better coverage.
+      but if you find yourself chaining many matchers together in one test, consider whether you
+      could instead refactor that single test into multiple, more precisely focused tests for
+      better coverage.
 
 ## Custom Validation
 
@@ -1349,15 +1348,15 @@ whether the actual value matches the expectation and what error message to
 display on failure.
 
 > The actual `equal` matcher function does not match when
-> `expected` are nil; the example above has been edited for brevity.
+  `expected` are nil; the example above has been edited for brevity.
 
 Since matchers are just Swift functions, you can define them anywhere:
 at the top of your test file, in a file shared by all of your tests, or
 in an Xcode project you distribute to others.
 
 > If you write a matcher you think everyone can use, consider adding it
-> to Nimble's built-in set of matchers by sending a pull request! Or
-> distribute it yourself via GitHub.
+  to Nimble's built-in set of matchers by sending a pull request! Or
+  distribute it yourself via GitHub.
 
 For examples of how to write your own matchers, just check out the
 [`Matchers` directory](https://github.com/Quick/Nimble/tree/main/Sources/Nimble/Matchers)
@@ -1621,7 +1620,7 @@ expect(nil).to(equal(nil)); // fails
 expect(nil).to(beNil());    // passes
 ```
 
-If your matcher does not want to match with nil, you use `Predicate.define` or `Predicate.simple`.
+If your matcher does not want to match with nil, you use `Predicate.define` or `Predicate.simple`. 
 Using those factory methods will automatically generate expected value failure messages when they're nil.
 
 ```swift
@@ -1659,9 +1658,9 @@ removed completely in Nimble v10.
 # Installing Nimble
 
 > Nimble can be used on its own, or in conjunction with its sister
-> project, [Quick](https://github.com/Quick/Quick). To install both
-> Quick and Nimble, follow [the installation instructions in the Quick
-> Documentation](https://github.com/Quick/Quick/blob/main/Documentation/en-us/InstallingQuick.md).
+  project, [Quick](https://github.com/Quick/Quick). To install both
+  Quick and Nimble, follow [the installation instructions in the Quick
+  Documentation](https://github.com/Quick/Quick/blob/main/Documentation/en-us/InstallingQuick.md).
 
 Nimble can currently be installed in one of two ways: using CocoaPods, or with
 git submodules.
@@ -1684,7 +1683,7 @@ install just Nimble.
 ## Installing Nimble via CocoaPods
 
 To use Nimble in CocoaPods to test your macOS, iOS or tvOS applications, add
-Nimble to your podfile and add the `use_frameworks!` line to enable Swift
+Nimble to your podfile and add the ```use_frameworks!``` line to enable Swift
 support for CocoaPods.
 
 ```ruby
@@ -1721,7 +1720,6 @@ class MyAssertionHandler : AssertionHandler {
     }
 }
 ```
-
 ```swift
 // Somewhere before you use any assertions
 NimbleAssertionHandler = MyAssertionHandler()
@@ -1729,12 +1727,10 @@ NimbleAssertionHandler = MyAssertionHandler()
 
 2. Add a post-build action to fix an issue with the Swift XCTest support
    library being unnecessarily copied into your app
-
-- Edit your scheme in Xcode, and navigate to Build -> Post-actions
-- Click the "+" icon and select "New Run Script Action"
-- Open the "Provide build settings from" dropdown and select your target
-- Enter the following script contents:
-
+  * Edit your scheme in Xcode, and navigate to Build -> Post-actions
+  * Click the "+" icon and select "New Run Script Action"
+  * Open the "Provide build settings from" dropdown and select your target
+  * Enter the following script contents:
 ```
 rm "${SWIFT_STDLIB_TOOL_DESTINATION_DIR}/libswiftXCTest.dylib"
 ```

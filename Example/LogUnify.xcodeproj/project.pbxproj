@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07831F5B88C9540457835F47 /* Pods_LogUnify_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98321EE2A4AA3F2A7B18F147 /* Pods_LogUnify_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,7 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6D58826E299B31930064ADF0 /* UserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D58826D299B31930064ADF0 /* UserActivity.swift */; };
-		FE3F12708728601C82B24226 /* Pods_LogUnify_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A904F1C5A61712C9A88FFDA /* Pods_LogUnify_Example.framework */; };
+		B9DAF0EC782314760E914173 /* Pods_LogUnify_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0842C3ED126390A7D9AB9BBA /* Pods_LogUnify_Example.framework */; };
+		C2E0FE0454D270C0FF3BA582 /* Pods_LogUnify_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76578A34C18AA8936F92ECB5 /* Pods_LogUnify_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0842C3ED126390A7D9AB9BBA /* Pods_LogUnify_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogUnify_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E8BED7AA44F37367EBBA1D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		244B4C37A45F1F13825EB231 /* Pods-LogUnify_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LogUnify_Tests/Pods-LogUnify_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2EF85ED038216487F56A95E6 /* Pods-LogUnify_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Example.release.xcconfig"; path = "Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example.release.xcconfig"; sourceTree = "<group>"; };
+		19B7BFF9D91F96126EF9D597 /* Pods-LogUnify_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Tests.release.xcconfig"; path = "Target Support Files/Pods-LogUnify_Tests/Pods-LogUnify_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1E3F80E12115A68C5F5F6A44 /* Pods-LogUnify_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Example.release.xcconfig"; path = "Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4DEE6395DD5CC4304764D39D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5A19DE1602B0E4A3B86845C2 /* LogUnify.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LogUnify.podspec; path = ../LogUnify.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* LogUnify_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogUnify_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +47,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6D58826D299B31930064ADF0 /* UserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivity.swift; sourceTree = "<group>"; };
 		6D58827B299B33610064ADF0 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A904F1C5A61712C9A88FFDA /* Pods_LogUnify_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogUnify_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		903E616E6AA40F1922CFD4B8 /* Pods-LogUnify_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Example.debug.xcconfig"; path = "Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		98321EE2A4AA3F2A7B18F147 /* Pods_LogUnify_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogUnify_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7D273E2655640045EB1D799 /* Pods-LogUnify_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Tests.release.xcconfig"; path = "Target Support Files/Pods-LogUnify_Tests/Pods-LogUnify_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		76578A34C18AA8936F92ECB5 /* Pods_LogUnify_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogUnify_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		876319A3877F1BB10AACBC62 /* Pods-LogUnify_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Example.debug.xcconfig"; path = "Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CBB35B5A749EBCE1DA820461 /* Pods-LogUnify_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogUnify_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LogUnify_Tests/Pods-LogUnify_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3F12708728601C82B24226 /* Pods_LogUnify_Example.framework in Frameworks */,
+				B9DAF0EC782314760E914173 /* Pods_LogUnify_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07831F5B88C9540457835F47 /* Pods_LogUnify_Tests.framework in Frameworks */,
+				C2E0FE0454D270C0FF3BA582 /* Pods_LogUnify_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				6D58827B299B33610064ADF0 /* SwiftProtobuf.framework */,
-				8A904F1C5A61712C9A88FFDA /* Pods_LogUnify_Example.framework */,
-				98321EE2A4AA3F2A7B18F147 /* Pods_LogUnify_Tests.framework */,
+				0842C3ED126390A7D9AB9BBA /* Pods_LogUnify_Example.framework */,
+				76578A34C18AA8936F92ECB5 /* Pods_LogUnify_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,10 +156,10 @@
 		9F3928BFE7BC652A8B58817E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				903E616E6AA40F1922CFD4B8 /* Pods-LogUnify_Example.debug.xcconfig */,
-				2EF85ED038216487F56A95E6 /* Pods-LogUnify_Example.release.xcconfig */,
-				244B4C37A45F1F13825EB231 /* Pods-LogUnify_Tests.debug.xcconfig */,
-				D7D273E2655640045EB1D799 /* Pods-LogUnify_Tests.release.xcconfig */,
+				876319A3877F1BB10AACBC62 /* Pods-LogUnify_Example.debug.xcconfig */,
+				1E3F80E12115A68C5F5F6A44 /* Pods-LogUnify_Example.release.xcconfig */,
+				CBB35B5A749EBCE1DA820461 /* Pods-LogUnify_Tests.debug.xcconfig */,
+				19B7BFF9D91F96126EF9D597 /* Pods-LogUnify_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -171,11 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LogUnify_Example" */;
 			buildPhases = (
-				5FA0980E627ABFF341A67D97 /* [CP] Check Pods Manifest.lock */,
+				3E8974484A08014225BFEA52 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				18E7CD162492F61F6C63382A /* [CP] Embed Pods Frameworks */,
+				AFEFF9D69FD15FF9112E9E89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,11 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "LogUnify_Tests" */;
 			buildPhases = (
-				88A7B08E75746E6D0A82B704 /* [CP] Check Pods Manifest.lock */,
+				77C0C79D211757ABCC208FCA /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				21DA37B76B15FFE009E1CC68 /* [CP] Embed Pods Frameworks */,
+				4FA45AB0535BC666D931C19E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,10 +218,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9PZJM65F5T;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9PZJM65F5T;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -268,29 +270,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18E7CD162492F61F6C63382A /* [CP] Embed Pods Frameworks */ = {
+		3E8974484A08014225BFEA52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LogUnify/LogUnify.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LogUnify.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+				"$(DERIVED_FILE_DIR)/Pods-LogUnify_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21DA37B76B15FFE009E1CC68 /* [CP] Embed Pods Frameworks */ = {
+		4FA45AB0535BC666D931C19E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,29 +317,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogUnify_Tests/Pods-LogUnify_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5FA0980E627ABFF341A67D97 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LogUnify_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88A7B08E75746E6D0A82B704 /* [CP] Check Pods Manifest.lock */ = {
+		77C0C79D211757ABCC208FCA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,6 +337,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFEFF9D69FD15FF9112E9E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LogUnify/LogUnify.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LogUnify.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LogUnify_Example/Pods-LogUnify_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -511,9 +515,10 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 903E616E6AA40F1922CFD4B8 /* Pods-LogUnify_Example.debug.xcconfig */;
+			baseConfigurationReference = 876319A3877F1BB10AACBC62 /* Pods-LogUnify_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PZJM65F5T;
 				INFOPLIST_FILE = LogUnify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -527,9 +532,10 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EF85ED038216487F56A95E6 /* Pods-LogUnify_Example.release.xcconfig */;
+			baseConfigurationReference = 1E3F80E12115A68C5F5F6A44 /* Pods-LogUnify_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PZJM65F5T;
 				INFOPLIST_FILE = LogUnify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -543,8 +549,9 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244B4C37A45F1F13825EB231 /* Pods-LogUnify_Tests.debug.xcconfig */;
+			baseConfigurationReference = CBB35B5A749EBCE1DA820461 /* Pods-LogUnify_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9PZJM65F5T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -566,8 +573,9 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7D273E2655640045EB1D799 /* Pods-LogUnify_Tests.release.xcconfig */;
+			baseConfigurationReference = 19B7BFF9D91F96126EF9D597 /* Pods-LogUnify_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 9PZJM65F5T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

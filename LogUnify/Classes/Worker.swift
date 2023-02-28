@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Reachability
 
 public class Worker {
     fileprivate static var instance: Worker?
@@ -17,6 +18,8 @@ public class Worker {
     fileprivate let httpClient: HttpClient
     fileprivate let serialQueue: DispatchQueue
     fileprivate var timer: DispatchSourceTimer
+    fileprivate var reachability: Reachability
+    fileprivate var isOnline = true
 
     static func getInstance(
         _ sqliteHelper: SqliteHelper,
@@ -35,6 +38,8 @@ public class Worker {
         self.timerTrigger = timerTrigger
         self.batchSize = batchSize
         self.serialQueue = DispatchQueue(label: "LogUnify", attributes: [])
+        reachability = try! Reachability()
+
         self.timer = DispatchSource.makeTimerSource(queue: serialQueue)
         timer.schedule(deadline: .now(), repeating: .seconds(timerTrigger), leeway: .seconds(1))
 
@@ -46,13 +51,23 @@ public class Worker {
             }
         }
         timer.resume()
+
+        reachability.whenReachable = { (reachability) in
+            NSLog("Device is online")
+            self.isOnline = true
+        }
+        reachability.whenUnreachable = { (reachability) in
+            NSLog("Device is offline")
+            self.isOnline = false
+        }
+        try? reachability.startNotifier()
     }
 
     public func addEvent(_ event: Event) {
         serialQueue.async {
             do {
                 let serializedEvent = try event.serialize().base64EncodedString()
-                
+
                 self.sqliteHelper.addEvent(event: serializedEvent, projectName: event.getProjectName(), schemaName: event.getSchemaName())
                 self.sendInBatches()
             } catch {
@@ -70,6 +85,10 @@ public class Worker {
     }
 
     private func sendInBatches(_ force: Bool = false) {
+        if (!isOnline) {
+            NSLog("Device is offline, skip log attempt")
+            return;
+        }
         lock.lock()
         let backlog = sqliteHelper.size()
 
@@ -91,7 +110,7 @@ public class Worker {
 
         self.httpClient.sendRequest(events) { data, response, error in
             if let error = error {
-                NSLog("Error while sending request: \(error)")
+                NSLog("Error while sending request: \(error.localizedDescription)")
                 self.lock.unlock()
                 return
             }

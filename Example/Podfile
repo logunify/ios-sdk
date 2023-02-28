@@ -6,6 +6,8 @@ target 'LogUnify_Example' do
   pod 'LogUnify', :path => '../'
   pod 'SQLite.swift', '~> 0.14.0'
   pod 'SwiftProtobuf', '~> 1.0'
+  pod 'ReachabilitySwift', '~> 5.0.0'
+  # pod 'LogUnify', '~> 0.1.1'
 
   target 'LogUnify_Tests' do
     inherit! :search_paths
