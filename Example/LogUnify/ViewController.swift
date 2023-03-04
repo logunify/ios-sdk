@@ -8,7 +8,6 @@
 
 import UIKit
 import LogUnify
-import MBProgressHUD
 import Reachability
 
 class ViewController: UIViewController {
@@ -16,23 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let config = LogUnifyConfig("http://localhost:8081/api/events/_bulk", timerTrigger: 10)
+        let config = LogUnifyConfig("http://localhost:8081/api/events/_bulk", apiKey: "apiKey", timerTrigger: 10)
         try! UnifyLogger.initialize(config)
-
-//        var event = UserActivity()
-//        event.userID = "iOS App"
-//        event.event = Event.click
-//        event.sessionID = "iOS Session"
-//        event.buttonType = ButtonType.next
-//        event.surface = Surface.screen1
-//        event.stringArray = ["a", "b", "c"]
-//        event.intArray = [1, 2, 3]
-//        var m = UserActivity.string_int_mapEntry()
-//        m.key = "key"
-//        m.value = 123
-//        event.stringIntMap.append(m)
-//
-//        event.log()
     }
     
     override func didReceiveMemoryWarning() {

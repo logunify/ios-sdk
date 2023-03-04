@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogUnify'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'LogUnify is a library makes logging events from your app to your data warehouse easy'
 
 # This description is used to generate tags and improve search results.

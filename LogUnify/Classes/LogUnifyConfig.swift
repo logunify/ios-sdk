@@ -10,13 +10,13 @@ import Foundation
 public struct LogUnifyConfig {
     // TODO: set a default value for this, use the cloud solution endpoint.
     var serverUrl: String;
-    var apiKey: String?;
+    var apiKey: String;
     var maxEvents: Int = 5000;
     var batchSize: Int = 10;
     var timerTrigger: Int = 60;
 
     public init(_ serverUrl: String,
-                apiKey: String? = nil,
+                apiKey: String,
                 maxEvents: Int = 5000,
                 batchSize: Int = 10,
                 timerTrigger: Int = 60) {
