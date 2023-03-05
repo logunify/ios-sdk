@@ -24,7 +24,7 @@ class HttpClient {
         var request = URLRequest(url: self.url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(self.apiKey, forHTTPHeaderField: "Authorization")
+        request.setValue(self.apiKey, forHTTPHeaderField: "X-Auth-Token")
 
         let body = EventRequest("test", "testOrg", records)
 
