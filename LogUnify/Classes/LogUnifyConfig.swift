@@ -8,7 +8,6 @@
 import Foundation
 
 public struct LogUnifyConfig {
-    // TODO: set a default value for this, use the cloud solution endpoint.
     var serverUrl: String;
     var apiKey: String;
     var maxEvents: Int = 5000;
@@ -17,12 +16,10 @@ public struct LogUnifyConfig {
 
     public init(_ serverUrl: String,
                 apiKey: String,
-                maxEvents: Int = 5000,
                 batchSize: Int = 10,
                 timerTrigger: Int = 60) {
         self.serverUrl = serverUrl
         self.apiKey = apiKey
-        self.maxEvents = maxEvents
         self.batchSize = batchSize
         self.timerTrigger = timerTrigger
     }

@@ -1,6 +1,6 @@
 {
   "name": "LogUnify",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "LogUnify is a library makes logging events from your app to your data warehouse easy",
   "description": "LogUnify makes it easy to collect your application events and send them to your data warehouse for monitoring and analytics.\nFeatures\n  * Code generation from event schema to ensure strongly typed events, multi-language support including Java, Swift, Typescript, etc.\n  * Client SDK for iOS / Android / node for events transmission\n  * K8s ready backend service for events ingestion\n  * Integration with BigQuery, auto table creation, schema definition and evolution",
   "homepage": "https://github.com/logunify/ios-sdk",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/logunify/ios-sdk.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "10.0"
