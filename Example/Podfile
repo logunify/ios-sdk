@@ -1,0 +1,20 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'LogUnify_Example' do
+  pod 'LogUnify', :path => '../'
+  pod 'SQLite.swift', '~> 0.14.0'
+  pod 'SwiftProtobuf', '~> 1.0'
+  pod 'ReachabilitySwift', '~> 5.0.0'
+  # pod 'LogUnify', '~> 0.1.1'
+
+  target 'LogUnify_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~> 10.0.0'
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+    pod 'Nimble-Snapshots' , '~> 9.4.0'
+  end
+end
